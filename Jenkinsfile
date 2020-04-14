@@ -1,6 +1,13 @@
 pipeline {
     agent any
+    stages {
+        stage ('SCM Checkout') {
 
+            steps {
+                   git url: 'https://github.com/devopsankur/jenkins-example.git',branch: 'master'
+                }
+            }
+        }
     stages {
         stage ('Compile Stage') {
 
